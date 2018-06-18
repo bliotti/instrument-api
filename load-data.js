@@ -2,8 +2,6 @@ require('dotenv').config()
 const PouchDB = require('pouchdb-core')
 PouchDB.plugin(require('pouchdb-adapter-http'))
 
-// https://admin:vu4JTjBY12Gk@bliotti.jrscode.cloud/instruments
-
 const db = new PouchDB(
 	`${process.env.COUCH_HOSTNAME}${process.env.COUCH_DBNAME}`
 )
